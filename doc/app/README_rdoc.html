@@ -76,12 +76,16 @@ steps are necessary to get the application up and running.</p>
 <p>Things you may want to cover:</p>
 <ul><li>
 <p>Ruby version</p>
+
+<p>rails version 4.2.0</p>
 </li><li>
 <p>System dependencies</p>
 </li><li>
 <p>Configuration</p>
 </li><li>
 <p>Database creation</p>
+
+<p>This example includes an example database sqlite3</p>
 </li><li>
 <p>Database initialization</p>
 </li><li>
@@ -90,9 +94,50 @@ steps are necessary to get the application up and running.</p>
 <p>Services (job queues, cache servers, search engines, etc.)</p>
 </li><li>
 <p>Deployment instructions</p>
-</li><li>
-<p>…</p>
+
+<p>git clone <a
+href="https://github.com/diegopiccinini/sortable_list.git">github.com/diegopiccinini/sortable_list.git</a></p>
 </li></ul>
+
+<p>## Here are the steps for set up in another project</p>
+
+<p>### at first you need ths gem</p>
+
+<pre class="ruby"><span class="ruby-identifier">gem</span> <span class="ruby-string">&#39;jquery-ui-rails&#39;</span>
+</pre>
+
+<p>### change this files aplication.js to add this:  //= require jquery-ui</p>
+
+<pre>...
+//= require jquery
+//= require jquery_ujs
+//= require jquery-ui
+//= require turbolinks
+//= require_tree .
+...</pre>
+
+<p>aplication.css to add this; *= require jquery-ui</p>
+
+<pre>...
+ * You&#39;re free to add application-wide styles to this file and they&#39;ll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *= require jquery-ui
+ *= require_tree .
+ *= require_self
+ ...</pre>
+
+<p>### make a migration to add the position or other integer to save the order
+field in this case I use a scaffold</p>
+
+<pre>bin/rails generate scaffold slide title:string position:integer</pre>
+
+<p>### change the css and js in this case slides.css and slides.coffee</p>
+
+<p>### The view see the slides/index.html.erb</p>
+
+<p>### The controller see the slides_controller order and index method</p>
 
 <p>Please feel free to use a different markup language if you do not plan to
 run <code>rake doc:app</code>.</p>
