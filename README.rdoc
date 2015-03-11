@@ -7,11 +7,15 @@ Things you may want to cover:
 
 * Ruby version
 
+  rails version 4.2.0
+
 * System dependencies
 
 * Configuration
 
 * Database creation
+
+  This example includes an example database sqlite3
 
 * Database initialization
 
@@ -21,7 +25,47 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+  git clone https://github.com/diegopiccinini/sortable_list.git
+
+## Here are the steps for set up in another project
+
+### at first you need ths gem
+
+  gem 'jquery-ui-rails'
+
+### change this files
+aplication.js to add this:  //= require jquery-ui
+  ...
+  //= require jquery
+  //= require jquery_ujs
+  //= require jquery-ui
+  //= require turbolinks
+  //= require_tree .
+  ...
+
+aplication.css to add this; *= require jquery-ui
+  ...
+   * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+   * compiled file so the styles you add here take precedence over styles defined in any styles
+   * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+   * file per style scope.
+   *= require jquery-ui
+   *= require_tree .
+   *= require_self
+   ...
+
+### make a migration to add the position or other integer to save the order field
+in this case I use a scaffold
+  bin/rails generate scaffold slide title:string position:integer
+
+### change the css and js
+in this case slides.css and slides.coffee
+
+### The view
+see the slides/index.html.erb
+
+### The controller
+see the slides_controller order and index method
 
 
 Please feel free to use a different markup language if you do not plan to run

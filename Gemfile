@@ -43,7 +43,7 @@ group :development, :test do
   gem 'spring'
 end
 
-gem 'libv8', '= 3.16.14.3'
+gem 'libv8'
 gem 'execjs'
 gem 'therubyracer'
 gem 'jquery-ui-rails'
