@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Slides</h1>
+<ul id="sortable">
+  <% @slides.each do |slide| %>
+  <li id="slide_<%= slide.id %>" class="ui-state-default full-width"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><%= slide.title %> |  <%= link_to 'Show', slide_path(slide) %>
+
+  </li>
+ <% end %>
+</ul>
+<a href="#" id="save_order">Save Order</a>
+
+<%= link_to 'New Slide', new_slide_path %>

@@ -1,0 +1,7 @@
+Wed, 11 Mar 2015 16:28:22 +0100
+README.rdoc	Wed, 11 Mar 2015 15:55:51 +0100
+app/controllers/application_controller.rb	Wed, 11 Mar 2015 15:55:51 +0100
+app/controllers/slides_controller.rb	Wed, 11 Mar 2015 16:18:57 +0100
+app/helpers/application_helper.rb	Wed, 11 Mar 2015 15:55:51 +0100
+app/helpers/slides_helper.rb	Wed, 11 Mar 2015 16:01:18 +0100
+app/models/slide.rb	Wed, 11 Mar 2015 16:01:18 +0100
